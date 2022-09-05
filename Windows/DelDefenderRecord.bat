@@ -8,5 +8,3 @@ forfiles /p %folder% /s /d %date:~0,10% /c "cmd /c del /q @file"
 forfiles /p %folder% /s /d %date:~0,10% /c "cmd /c echo @file" 
 )
 exit
-
-
