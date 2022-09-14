@@ -15,28 +15,40 @@ def pingo(iteration,
     fillLength = int(length * iteration // total)
     bar = fill * fillLength + '-' * (length - fillLength-1)
     print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end='\r')
+    if iteration == total:
+        print('')
 
 
-text_file = open("pass.txt", "r", encoding="utf8")
-words = text_file.read().splitlines()
+pawd_file = open("pass.txt", "r", encoding="utf-8")
+words = pawd_file.read().splitlines()
 
-hash = input('Hash to crack: ')
+#hash = input('Hash to crack: ')
+hashed_file = open("hashed.txt", "r", encoding="utf-8")
+hashed = hashed_file.read().splitlines()
 
 length = len(words)
 
 correct_word = ""
 found = 0
-for (index,word) in enumerate(words):
-	
-	correct = bcrypt.checkpw(word.encode('utf8'), hash.encode('utf8'))
-	pingo(index, length, prefix='Wait:', suffix='Words complete from the list')
-	if (correct):
-		correct_word = word
-		found += 1
-		break
+break_out_flag = False
 
-if (found == 1):
-    print("\n[+]Password found!")
-    print("[*]Results:", correct_word)
-else:
-    print("\n[-]Unfortunately, password not found.")
+for temp in hashed:
+    hash = str(temp)
+    print('Hash to crack: '+hash)
+    for (index,word) in enumerate(words):
+        correct = bcrypt.checkpw(word.encode('utf8'), hash.encode('utf8'))
+        pingo(index, length, prefix='Wait:', suffix='Words complete from the list')
+        if (correct):
+            correct_word = word
+            found += 1
+            break
+    if break_out_flag:
+        break
+        
+    if (found == 1):
+            print("\n\033[92m[+]Congratulations!Password found!\033[0m")
+            print("\033[92m[*]Results:", correct_word+'\033[0m')
+            found = 0
+            
+    else:
+            print("\n\033[91m[-]Unfortunately, password not found.\033[0m")
