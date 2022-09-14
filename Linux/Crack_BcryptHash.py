@@ -22,7 +22,6 @@ def pingo(iteration,
 pawd_file = open("pass.txt", "r", encoding="utf-8")
 words = pawd_file.read().splitlines()
 
-#hash = input('Hash to crack: ')
 hashed_file = open("hashed.txt", "r", encoding="utf-8")
 hashed = hashed_file.read().splitlines()
 
@@ -47,8 +46,8 @@ for temp in hashed:
         
     if (found == 1):
             print("\n\033[92m[+]Congratulations!Password found!\033[0m")
-            print("\033[92m[*]Results:", correct_word+'\033[0m')
+            print("\033[92m[*]Results:", correct_word+'\033[0m\n')
             found = 0
             
     else:
-            print("\n\033[91m[-]Unfortunately, password not found.\033[0m")
+            print("\033[91m[-]Unfortunately, password not found.\033[0m\n")
