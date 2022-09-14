@@ -9,4 +9,4 @@
 python3 Crack_BcryptHash.py
 ```
 
-<div align=center><img width="500" height="500" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/1.jpg" alt="效果图1"/></div>
+<div align=left><img width="600" height="500" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/1.jpg" alt="效果图1"/></div>
