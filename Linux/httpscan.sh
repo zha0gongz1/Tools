@@ -11,12 +11,12 @@ else
 fi
 
 main(){
-	output=$BASE_IP"_log"
-	echo $subip >>$output
+	output=$BASE_IP"_result"
 	status_code=$(curl -H 'Accept-Language: en-US,en;q=0.5' -A 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko' -o /dev/null -s -w '%{http_code}' -m 10 http://$subip:80/)
 	#echo $status_code
 	if [[ "$status_code" -ge 200 ]]; then
   		echo -e "\033[92m[+]"$subip" status_code:"$status_code"\033[0m"
+		echo "[+]"$subip" status_code:"$status_code >>$output
 	#else
   		#echo -e "\033[91m[-]"$subip" not exist web service\033[0m"
 	fi
@@ -75,5 +75,5 @@ wait
 exec 6<&-
 exec 6>&-
 
-sleep 8
+sleep 10
 echo -e "\033[36mThe detection has been completed,Good luck!\n\t\t\t By zha0gongz1@影\033[0m"
