@@ -9,4 +9,14 @@
 python3 Crack_BcryptHash.py
 ```
 
-<div align=left><img width="600" height="500" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/1.jpg" alt="效果图1"/></div>
+<div align=left><img width="600" height="500" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/1.jpg" alt="demo1"/></div>
+
+### 2.[内网web服务批量探测脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/httpscan.sh)
+
+使用方法：
+
+``` shell
+./httpscan.sh [CIDR IP] [Thread,Default 4]
+```
+
+<div align=left><img width="600" height="500" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/httpscan.jpg?raw=true" alt="demo2"/></div>
