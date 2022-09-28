@@ -11,13 +11,13 @@ else
 fi
 
 main(){
-	output=$BASE_IP"_result"
 	status_code=$(curl -H 'Accept-Language: en-US,en;q=0.5' -A 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko' -I -s -m 6 http://$subip:80/ | grep HTTP/ | awk {'print $2'})
 	#echo $status_code
 	title=$(curl -H 'Accept-Language: en-US,en;q=0.5' -A 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko' -L -s -m 10 http://$subip:80/ | grep -iPo '(?<=<title>)(.*)(?=</title>)')
 	if [[ "$status_code" -ge 200 ]]; then
   		echo -e "\033[92m[+]"$subip" status_code:"$status_code"\033[0m"
-		echo -e "IP:"$subip"\t||status_code:"$status_code"\t||web_title:"$title >>$output
+		printf "|%-16s|%-6s|%-30s|" "$subip" "$status_code" "$title" >>$output
+  		echo -e "\n+----------------+------+------------------------------+">>$output
 	#else
   		#echo -e "\033[91m[-]"$subip" not exist web service\033[0m"
 	fi
@@ -41,7 +41,10 @@ done
 
 BASE_IP=${1%/*}	#get IP
 IP_CIDR=${1#*/} #get CIDR value
-
+output=$BASE_IP"_result"
+echo "+----------------+------+------------------------------+">>$output
+echo "|       IP       |Status|         WebTitle             |">>$output
+echo "+----------------+------+------------------------------+">>$output
 
 if [ ${IP_CIDR} -lt 8 ]; then
     echo "The maximum range is /8."
