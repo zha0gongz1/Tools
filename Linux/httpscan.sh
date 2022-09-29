@@ -17,7 +17,7 @@ main(){
 	if [[ "$status_code" -ge 200 ]]; then
   		echo -e "\033[92m[+]"$subip" status_code:"$status_code"\033[0m"
 		printf "|%-16s|%-6s|%-30s|" "$subip" "$status_code" "$title" >>$output
-  		echo -e "\n+----------------+------+------------------------------+">>$output
+  		echo -e "\n+----------------+------+----------------------------------------+">>$output
 	#else
   		#echo -e "\033[91m[-]"$subip" not exist web service\033[0m"
 	fi
@@ -42,9 +42,9 @@ done
 BASE_IP=${1%/*}	#get IP
 IP_CIDR=${1#*/} #get CIDR value
 output=$BASE_IP"_result"
-echo "+----------------+------+------------------------------+">>$output
-echo "|       IP       |Status|         WebTitle             |">>$output
-echo "+----------------+------+------------------------------+">>$output
+echo "+----------------+------+----------------------------------------+">>$output
+echo "|       IP       |Status|              WebTitle                  |">>$output
+echo "+----------------+------+----------------------------------------+">>$output
 
 if [ ${IP_CIDR} -lt 8 ]; then
     echo "The maximum range is /8."
@@ -79,5 +79,6 @@ wait
 exec 6<&-
 exec 6>&-
 
-sleep 10
+sleep 9
+echo -e "\033[36m[*]Runtime: $((($SECONDS / 60) % 60))min $(($SECONDS % 60))sec\033[0m"
 echo -e "\033[36mThe detection has been completed,Good luck!\n\t\t\t By zha0gongz1@影\033[0m"
