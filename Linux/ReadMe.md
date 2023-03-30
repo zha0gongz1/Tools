@@ -20,3 +20,11 @@ python3 Crack_BcryptHash.py
 ```
 
 <div align=left><img width="700" height="400" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/httpscan.jpg?raw=true" alt="demo2"/></div>
+
+### 3.[子域名收集脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/subdomain.sh)
+
+使用方法：
+
+``` shell
+./subdomain.sh [domain.com] [output.txt]
+```
