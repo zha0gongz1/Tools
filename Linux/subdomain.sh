@@ -11,7 +11,7 @@ python3 /home/kali/Tool/subDomainsBrute/subDomainsBrute.py  $domain -o subDomain
 
 # 使用subfinder进行子域名枚举
 echo -e "\033[5m\033[1;33m[+]start processing subfinder...\033[0m"
-subfinder -d $domain -silent -o subfinder.txt
+subfinder -d $domain -all -silent -o subfinder.txt
 
 sleep 1
 # 使用OneForAll进行子域名枚举
