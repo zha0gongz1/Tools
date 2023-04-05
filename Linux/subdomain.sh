@@ -9,7 +9,7 @@
 # httpx
 # gau
 ######################################################################
-#注：工具地址是绝对路径，适配个人机器需要更改！
+
 
 domain=$1
 touch NewSubDomainsBrute.txt oneforall.txt subfinder.txt
