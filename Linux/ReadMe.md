@@ -21,10 +21,20 @@ python3 Crack_BcryptHash.py
 
 <div align=left><img width="700" height="400" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/httpscan.jpg?raw=true" alt="demo2"/></div>
 
-### 3.[子域名收集脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/subdomain.sh)
+### 3.[子域名收集脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/.sh)
 
 使用方法：
 
 ``` shell
-./subdomain.sh [domain.com] [output.txt]
+#注：使用前确保本地已经配置 subDomainsBrute、subfinder、oneforall、ksubdomain、gau、katana、nuclei 以及 nuclei-templates
+./detect_subdomains.sh [domain.com]
+```
+
+### 4.[IP端口及web服务探测脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/detect_ipwebs.sh)
+
+使用方法：
+
+``` shell
+#注：使用前确保本地已经配置 dnsx、naabu、httpx、nuclei 以及 nuclei-templates
+./detect_ipwebs.sh.sh [domain.com]
 ```
