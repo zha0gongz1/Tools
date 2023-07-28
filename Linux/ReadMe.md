@@ -3,9 +3,8 @@
 
 使用方法：
 
-同级目录下，准备字典文件`pass.txt`、密文文件`hashed.txt`，运行如下命令即可：
-
 ``` python
+#同级目录下，准备字典文件`pass.txt`、密文文件`hashed.txt`，运行如下命令即可：
 python3 Crack_BcryptHash.py
 ```
 
@@ -26,7 +25,7 @@ python3 Crack_BcryptHash.py
 使用方法：
 
 ``` shell
-#注：使用前确保本地已经配置 subDomainsBrute、subfinder、oneforall、ksubdomain、gau、katana、nuclei 以及 nuclei-templates
+#注：使用前，确保本地已经配置 subDomainsBrute、subfinder、oneforall、ksubdomain、gau、katana、nuclei 以及 nuclei-templates
 ./detect_subdomains.sh [domain.com]
 ```
 
@@ -35,6 +34,15 @@ python3 Crack_BcryptHash.py
 使用方法：
 
 ``` shell
-#注：使用前确保本地已经配置 dnsx、naabu、httpx、nuclei 以及 nuclei-templates
+#注：使用前，确保本地已经配置 dnsx、naabu、httpx、nuclei 以及 nuclei-templates
 ./detect_ipwebs.sh.sh [domain.com]
+```
+
+### 5.[CME工具RDP/SMB批量PTH脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/CME_BatchPTH.sh)
+
+使用方法：
+
+``` shell
+#注：使用前，确保当前目录准备好cme工具、IP列表及收集的哈希值列表
+./CME_BatchPTH.sh [mode]
 ```
