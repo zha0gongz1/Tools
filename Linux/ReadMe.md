@@ -18,7 +18,7 @@ python3 Crack_BcryptHash.py
 ./httpscan.sh [CIDR IP] [Thread,Default 4]
 ```
 
-<div align=left><img width="700" height="400" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/httpscan.jpg?raw=true" alt="demo2"/></div>
+
 
 ### 3.[子域名收集脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/.sh)
 
@@ -45,4 +45,17 @@ python3 Crack_BcryptHash.py
 ``` shell
 #注：使用前，确保当前目录准备好cme工具、IP列表及收集的哈希值列表
 ./CME_BatchPTH.sh [mode]
+```
+
+### 5.[cmd5批量解密脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/DecCMD5.py)
+
+场景：获取数据库用户数据后，批量解密cmd5值脚本
+
+<div align=left><img width="700" height="400" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/hashes.jpg?raw=true" alt="demo3"/></div>
+
+使用方法：
+
+``` shell
+#注：使用前，准备好hashes和password文件
+python3 DecCMD5.py -H hashes.txt -p password.txt
 ```
