@@ -51,7 +51,7 @@ python3 Crack_BcryptHash.py
 
 场景：获取数据库用户数据后，批量解密cmd5值脚本
 
-<div align=left><img width="700" height="400" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/hashes.jpg?raw=true" alt="demo3"/></div>
+<div align=left><img width="500" height="400" src="https://github.com/zha0gongz1/Tools/blob/main/Linux/Img/hashes.jpg?raw=true" alt="hash文件样例"/></div>
 
 使用方法：
 
