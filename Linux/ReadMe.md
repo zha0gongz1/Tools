@@ -47,7 +47,7 @@ python3 Crack_BcryptHash.py
 ./CME_BatchPTH.sh [mode]
 ```
 
-### 5.[cmd5批量解密脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/DecCMD5.py)
+### 6.[cmd5批量解密脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/DecCMD5.py)
 
 场景：获取数据库用户数据后，批量解密cmd5值脚本
 
@@ -58,4 +58,13 @@ python3 Crack_BcryptHash.py
 ``` shell
 #注：使用前，准备好hashes和password文件
 python3 DecCMD5.py -H hashes.txt -p password.txt
+```
+### 7.[读取MongoDB数据文件脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/Bson2Json.py)
+
+场景：获取Bson格式的数据库文件后，转为可读的Json格式
+
+使用方法：
+
+``` shell
+python3 Bson2Json.py xxx.bson
 ```
