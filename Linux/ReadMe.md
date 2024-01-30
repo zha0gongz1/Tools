@@ -69,7 +69,7 @@ python3 DecCMD5.py -H hashes.txt -p password.txt
 python3 Bson2Json.py xxx.bson
 ```
 
-### 8.[快速批量fuzz测试多个url脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/fuffer.py)
+### 8.[快速批量fuzz测试多个url脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/ffufer.py)
 
 
 场景：批量挖洞/目标存在多个旁站时，批量测试
