@@ -71,11 +71,21 @@ python3 Bson2Json.py xxx.bson
 
 ### 8.[快速批量fuzz测试多个url脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/ffufer.py)
 
-
 场景：批量挖洞/目标存在多个旁站时，批量测试
 
 使用方法：
 
 ``` shell
 python3 ffufer.py urls.txt words.txt 
+```
+
+### 8.[针对多目标dirsearch自动化扫描脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/multi_dirsearch.py)
+
+场景：需要对多个域名进行目录扫描时
+
+使用方法：
+
+``` shell
+#注：使用时，将本脚本放置于dirsearch.py同级目录，或修改本脚本，指定dirsearch工具位置
+python3 multi_dirsearch.py -f urls.txt 
 ```
