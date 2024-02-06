@@ -79,9 +79,9 @@ python3 Bson2Json.py xxx.bson
 python3 ffufer.py urls.txt words.txt 
 ```
 
-### 8.[针对多目标dirsearch自动化扫描脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/multi_dirsearch.py)
+### 9.[针对多目标dirsearch自动化扫描脚本](https://github.com/zha0gongz1/Tools/blob/main/Linux/multi_dirsearch.py)
 
-场景：需要对多个域名进行目录扫描时
+场景：需要对多个域名进行目录扫描
 
 使用方法：
 
