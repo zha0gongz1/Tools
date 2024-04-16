@@ -89,3 +89,25 @@ python3 ffufer.py urls.txt words.txt
 #注：使用时，将本脚本放置于dirsearch.py同级目录，或修改本脚本，指定dirsearch工具位置
 python3 multi_dirsearch.py -f urls.txt 
 ```
+
+### 10.[文件上传fuzz测试字典生成器](https://github.com/zha0gongz1/Tools/blob/main/Linux/fileUpload_fuzz_dic.py)
+
+<div align=left><img width="500" height="400" src="https://raw.githubusercontent.com/zha0gongz1/Tools/main/Linux/Img/fileUpload_fuzz_dict.jpg" alt="fileUpload_fuzz_dict"/></div>
+
+使用方法：
+
+``` shell
+─$ python3 fileUpload_fuzz_dic.py -h                   
+usage: upload-fuzz-dic-builder [-h] [-n] [-a] [-l] [-m] [--os] [-d] [-o]
+
+options:
+  -h, --help            show this help message and exit
+  -n , --upload-filename 
+                        Upload file name
+  -a , --allow-suffix   Allowable upload suffix
+  -l , --language       Uploaded script language
+  -m , --middleware     Middleware used in Web System
+  --os                  Target operating system type
+  -d, --double-suffix   Is it possible to generate double suffix?
+  -o , --output         Output file
+```
