@@ -14,7 +14,7 @@ import urllib.parse
 ## 各类语言可解析的后缀
 html_parse_suffix = ['html','htm','phtml','pht','Html','Htm','pHtml']
 asp_parse_suffix = ['asp','aspx','asa','asax','ascx','ashx','asmx','cer','aSp','aSpx','aSa','aSax','aScx','aShx','aSmx','cEr','cdx','cshtml','svc','soap','aspq','axd','cshtm','rem','vbhtm','vbhtml']
-php_parse_suffix = ['php','php5','php4','php3','php2','pHp','pHp5','pHp4','pHp3','pHp2','pht','phtml','phtm','pwml']
+php_parse_suffix = ['php','php5','php4','php3','php2','pHp','pHp5','pHp4','pHp3','pHp2','pht','phtml','phtm','pwml','phps','phpt','phar','pgif','inc','shtml']
 jsp_parse_suffix = ['jsp','jspa','jspx','jsw','jsv','jspf','jtml','jSp','jSpx','jSpa','jSw','jSv','jSpf','jHtml']
 
 
